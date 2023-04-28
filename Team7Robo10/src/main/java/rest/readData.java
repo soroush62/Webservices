@@ -25,6 +25,6 @@ public class readData {
 	    List<MotorData> motorDataList = query.getResultList();
 	    MotorData motorData = motorDataList.get(0);
 	    int speedA = motorData.getSpeedA();
-	    return ""+speedA;
+	    return ""+speedA; //convert return to integer
 	}
 }

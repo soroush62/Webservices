@@ -75,7 +75,7 @@ public class httptest {
 //      while ((s=br.readLine())!=null){
 //        System.out.println(s);
 //      }
-            int speedA = Integer.parseInt(s); // create integer entry
+            int speedA = Integer.parseInt(s); //create integer entry
               motorA.setSpeed(speedA);
               motorD.setSpeed(speedA);
               motorA.forward();

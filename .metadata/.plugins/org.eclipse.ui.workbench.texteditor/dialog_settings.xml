@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value=""/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="new"/>
+			<item value="SPEED"/>
+			<item value="getspeedD"/>
+			<item value="postBookByParams"/>
+			<item value="speedB"/>
+			<item value="SPEEDB"/>
+			<item value="data.MotorData"/>
+			<item value="bookapp"/>
+			<item value="Motor"/>
+			<item value="Motors"/>
+			<item value="jpabooks"/>
+			<item value="wait"/>
+			<item value="binding"/>
+			<item value="xmlhttp"/>
+			<item value="readOneDog"/>
+		</list>
+		<list key="replacehistory">
+			<item value="speedD"/>
+			<item value="EV3"/>
+			<item value="MotorData"/>
+			<item value="book"/>
+			<item value="pagenum"/>
+			<item value="name"/>
+			<item value="Book"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1775"/>
+		<item key="DIALOG_Y_ORIGIN" value="284"/>
+		<item key="DIALOG_WIDTH" value="385"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

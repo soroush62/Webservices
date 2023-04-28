@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method='post' action='/rest/motor/speed'>
+<input type='text' name='speedA' value=''><br>
+<input type='text' name='speedB' value=''><br>
+<input type='submit' name='ok' value='Ok'><br>
+</form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+package data;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="speed") 
+public class MotorData {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private int speedA;
+    private int speedD;
+    
+    public MotorData() {
+        super();
+    }
+    
+    public MotorData(int id, int speedA, int speedD) {
+        super();
+        this.id = id;
+        this.speedA = speedA;
+        this.speedD = speedD;
+    }
+    
+    public MotorData(int speedA, int speedD) {
+        super();
+        this.speedA = speedA;
+        this.speedD = speedD;
+    }
+    
+    public int getSpeedA() {
+        return speedA;
+    }
+    
+    public void setSpeedA(int speedA) {
+        this.speedA = speedA;
+    }
+    
+    public int getSpeedD() {
+        return speedD;
+    }
+
+    public void setSpeedD(int speedD) {
+        this.speedD = speedD;
+    }
+
+}

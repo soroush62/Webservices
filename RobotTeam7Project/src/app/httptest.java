@@ -75,16 +75,17 @@ public class httptest {
 //      while ((s=br.readLine())!=null){
 //        System.out.println(s);
 //      }
-            int speedA = Integer.parseInt(s); //   create integer entry
-              motorA.setSpeed(speedA);
-              motorD.setSpeed(speedA);
-              motorA.forward();
-              motorD.forward();
-              // Wait for 5 seconds
-              Delay.msDelay(5000);
-              // Stop motors
-              motorA.stop();
-              motorD.stop();
+           int speedA = Integer.parseInt(s); //   create integer entry
+//              motorA.setSpeed(speedA);
+//              motorD.setSpeed(speedA);
+//              motorA.forward();
+//              motorD.forward();
+//              // Wait for 5 seconds
+//              Delay.msDelay(5000);
+//              // Stop motors
+//              motorA.stop();
+//              motorD.stop();
+              
     }
       catch(Exception e) {
         e.printStackTrace();

@@ -1,0 +1,61 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+public class test3 {
+    AtomicBoolean robotStop;
+    AtomicBoolean robotrotate;
+    static float lastReading = 0;
+    static float distance = 0;
+    static long startTime = System.currentTimeMillis();
+
+    private static void sendMileage(float mileage) {
+        HttpURLConnection conn = null;
+//        InputStreamReader isr = null;
+//        BufferedReader br=null;
+ 
+        try {
+            URL url = new URL("http://192.168.0.103:8080/rest/motor/mileage/"+mileage);
+            conn = (HttpURLConnection)url.openConnection();
+            conn.setDoOutput(true);
+
+    //        String jsonInputString = "{\"mileage\": " + mileage + ", \"duration\": " + duration + "}";
+//            String jsonInputString = "{\"mileage\": " + mileage + "}";
+//            try (OutputStream os = conn.getOutputStream()) {
+//                byte[] input = jsonInputString.getBytes("utf-8");
+//                os.write(input, 0, input.length);
+//            }
+
+//            InputStream is=null;
+//            try {
+//              is=conn.getInputStream();
+//            }
+//            catch (Exception e) {
+//                System.out.println("Exception conn.getInputSteam()");
+//                e.printStackTrace();
+//                    System.out.println("Cannot get InputStream!");
+//            }
+//            isr = new InputStreamReader(is);
+//                br=new BufferedReader(isr);
+//                String s = br.readLine();
+//                System.out.println("Return: " + s);
+//
+//            
+            
+            
+            int responseCode = conn.getResponseCode();
+            System.out.println("Response Code: " + responseCode);
+        } catch (IOException e) {
+            System.out.println("Error sending mileage data: " + e.getMessage());
+        }
+    }
+
+    public static void main(String[] args) {
+        sendMileage(400);
+    }
+}

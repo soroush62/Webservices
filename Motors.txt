@@ -1,0 +1,108 @@
+package app;
+
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import lejos.hardware.Button;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+
+public class Motors extends Thread {
+//	private static int speedA;
+    static EV3LargeRegulatedMotor motorA = new EV3LargeRegulatedMotor(MotorPort.A);
+    static EV3LargeRegulatedMotor motorD = new EV3LargeRegulatedMotor(MotorPort.D);
+
+
+  public static void main(String[] args) {
+    
+        System.out.println("Read some text from URL\n");
+        System.out.println("Press any key to start");
+        
+        Button.waitForAnyPress();
+
+        URL url = null;
+      HttpURLConnection conn = null;
+      InputStreamReader isr = null;
+      BufferedReader br=null;
+
+      String s=null;
+    try {
+      url = new URL("http://192.168.0.17:8080/rest/tadaa/tuduu");
+      conn = (HttpURLConnection)url.openConnection();
+        System.out.println(conn.toString()); //Tulostaa vain URLin
+      InputStream is=null;
+      try {
+        is=conn.getInputStream();
+      }
+      catch (Exception e) {
+          System.out.println("Exception conn.getInputSteam()");
+          e.printStackTrace();
+              System.out.println("Cannot get InputStream!");
+      }
+      isr = new InputStreamReader(is);
+          br=new BufferedReader(isr);
+          s = br.readLine();
+
+           int speedA = Integer.parseInt(s); //   create integer entry//  
+           Motors.setSpeedA(speedA); // Set the value of speedA using the setter method // ...
+              
+    }
+    
+      catch(Exception e) {
+        e.printStackTrace();
+            System.out.println("Some problem!");
+      }
+        System.out.println("Press any key to FINISH");
+        Button.waitForAnyPress();
+  }
+  // Define the getter method for speedA
+  public static int getSpeedA() {
+      return getSpeed();
+  }
+
+  // Define the setter method for speedA
+  public static void setSpeedA(int speedA) {
+  	Motors.speed = speedA;
+  }
+  public EV3LargeRegulatedMotor getMotorA() {
+	    return motorA;
+	  }
+
+	  public EV3LargeRegulatedMotor getMotorD() {
+	    return motorD;
+	  }
+	  //*********************
+private static int speed = getSpeedA();
+
+	  public static int getSpeed() {
+	return speed;
+}
+public static void setSpeed(int speed) {
+	Motors.speed = speed;
+}
+//*******************************
+	public static void run1() {
+	    motorA.setSpeed(speed+100);
+	    motorD.setSpeed(speed-50);
+	    motorA.forward();
+	    motorD.forward();
+	  }
+
+	  public static void run2() {
+	    motorA.setSpeed(speed-50);
+	    motorD.setSpeed(speed+100);
+	    motorA.forward();
+	    motorD.forward();
+	  }
+	  public static void run3() {
+		    motorA.setSpeed(0);
+		    motorD.setSpeed(0);
+		    motorA.stop();
+		    motorD.stop();
+		  }
+
+
+}

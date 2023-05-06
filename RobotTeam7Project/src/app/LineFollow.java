@@ -6,11 +6,11 @@ import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.robotics.SampleProvider;
 
 
-import java.awt.event.KeyEvent;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.concurrent.atomic.AtomicBoolean;
+
 
 
 public class LineFollow implements Runnable {

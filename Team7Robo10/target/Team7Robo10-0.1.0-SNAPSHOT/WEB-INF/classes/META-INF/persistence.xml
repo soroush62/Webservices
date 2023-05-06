@@ -5,7 +5,7 @@
 	
 	<persistence-unit name="speed">
 	<class>data.MotorData</class>  <!--tells which classes of the project can be persisted with JPA technology -->
-		
+	<class>data.MileageData</class>	
 <!-- If using MySQL 5.7 -->
 <!--  
 	as a root user give a command

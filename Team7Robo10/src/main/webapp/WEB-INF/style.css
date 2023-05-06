@@ -1,0 +1,91 @@
+@charset "windows-1256";
+body {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  color:rgb(17, 13, 13);
+  font-size: 16px;
+  margin: 16px auto;
+}
+
+.more {
+  border: none; 
+  color: white; 
+  padding: 8px 18px;
+  cursor: pointer; 
+  background-color: #071408;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+  
+ul.horizontal-list {
+  list-style: none;
+  display: table;
+  margin: 0 auto;
+}
+
+ul.horizontal-list li {
+  display: inline-block;
+  min-width: 10rem;
+  text-align: center;
+  margin-right: 20px;
+  font-size: 26px;
+  padding-top: 26px;
+}
+
+.line-divider {
+  width: 60%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 20px auto;
+}
+
+a {
+  color:rgb(17, 13, 13);
+}
+
+a:hover {
+  color:rgb(17, 13, 13);
+}
+
+a:active {
+  color:rgb(17, 13, 13);
+}
+
+
+#Sale {
+  color:rgb(225, 63, 52);
+} 
+
+#Sale:hover {
+  color:rgb(133, 26, 26);
+}
+
+#Sale:active {
+  color:rgb(133, 26, 26);
+}
+
+.logo {
+    padding-top: 50px;
+    padding-bottom:16px;
+    padding-left:20px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    }
+
+    .logo:hover {
+      transform: scale(1.03);
+    }
+
+h1{
+      font-size: 48px;
+      font-weight: normal;
+      
+    }
+
+    .bg-image:hover .text-white h1 {
+      display: block;
+    }
+
+    .text-white h1 {
+      display: none;
+    }

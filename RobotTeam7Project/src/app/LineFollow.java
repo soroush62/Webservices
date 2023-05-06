@@ -14,13 +14,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 
 public class LineFollow implements Runnable {
-//	AtomicBoolean robotStop;
-//	private AtomicBoolean robotrotate;
-//
-//	  public LineFollow(AtomicBoolean robotStop, AtomicBoolean robotrotate) {
-//		    this.robotStop = robotStop;
-//		    this.robotrotate = robotrotate;
-//		  }
 
   static float lastReading = 0;
   static float distance = 0;
@@ -72,25 +65,6 @@ public LineFollow() {
 		
         Motors.run6(output);
 
-//		if (robotStop.get() && !robotrotate.get()) {
-//	        Motors.run3();
-//
-//	        boolean forStopWhile = false;
-//	        while (!forStopWhile) {
-//	          colorProvider.fetchSample(sample, 0);
-//	          float redValue1 = sample[0];
-//	          if (redValue1 < 0.25) {
-//	            forStopWhile = true;
-//	            Motors.run7();
-//	            robotStop.set(false);
-//
-//	          }
-//	        }
-//	      }
-//	      while (robotStop.get() && robotrotate.get()) {
-//	        Motors.run5();
-//	       
-//	      }
 
 	    
       if (Button.DOWN.isDown()) {
